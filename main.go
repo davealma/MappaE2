@@ -41,7 +41,8 @@ func GetOracleInfo(stelarJump int, ignoreCount bool) []Star {
 
 	var stars []Star
 
-	json.Unmarshal([]byte(body), &stars)	
+	json.Unmarshal([]byte(body), &stars)
+	
 	
 	if !ignoreCount {
 		count, err := strconv.Atoi(totalCountHeader); if err != nil{
